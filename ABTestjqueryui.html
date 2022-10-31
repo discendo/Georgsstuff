@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+ <!--   <meta name ="viewport" content="width-device-width, initial-scale=1.0">   -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="ABTest.css">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<title>OnlineAB</title>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+ <script>
+  $(document).ready(function(){ 
+		$( "#draggable" ).draggable();
+		
+		 $("#bildelement").click(function() {
+		    $('#abquer').append('<div id="draggable" class="bild"><p>nicht bewegbar</p>	</div>');
+			
+			
+         } );
+
+});
+    
+
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+<header><span>Online AB erstellen </span><span style = "float :right; margin-right: 10px">Speichern Login   </span></header>
+
+<section>
+
+<div class = "spalte" id="linkespalte">
+
+<fieldset>
+    <legend>Bearbeitung der AB's</legend>
+	
+      <input type="radio" id="login" name="anonym" value ="" checked>
+      <label for="login">Login nötig</label><br>
+      <input type="radio" id="nickname" name="anonym" value="">
+      <label for="nickname">Nur Nickname nötig</label>  <br>
+	  <input type="radio" id="anonym" name="anonym" value="querf">
+      <label for="anonym">Anonym</label><br>
+</fieldset>
+
+<fieldset>
+    <legend>Einstellungen:</legend>
+	
+      <input type="checkbox" id="nutzer" name="nutzer" value ="" checked>
+      <label for="nutzer">AB veröffentlichen</label><br>
+	  <input type="checkbox" id="sammeln" name="sammeln" value ="" checked>
+      <label for="">Ergebnisse sammeln?</label><br>
+	  Bearbeitungszeit in Minuten?:<br><input type="text" id="frage" name="frage" ><br>
+	   <input type="checkbox" id="uhr" name="sammeln" value ="" checked>
+      <label for="uhr">Uhr anzeigen während Bearbeitungsphase?</label><br>
+	  
+	  
+    
+</fieldset>
+</div>
+
+
+
+<div id="abquer" >
+	<div id="draggable" class="bild">
+	  <p>Drag me around</p>
+	</div>
+</div>
+
+
+
+<div class = "spalte" id="rechtespalte">
+
+
+<fieldset>
+    <legend>Format auswählen:</legend>
+	
+      <input type="radio" id="quer" name="format" value ="hochf" checked>
+      <label for="quer1">Querformat</label><br>
+      <input type="radio" id="hoch" name="format" value="querf">
+      <label for="hoch1">Hochformat</label>
+</fieldset>
+
+
+<hr>
+<p>Elemente einfügen <br>
+      <input class="Element"  id="bildelement"   	type="button" value="Bild" click = "formel('bildelement')">
+      <input class="Element"  id="textelement"  	type="button" value="Text">
+      <input class="Element"  id="frageelement" 		type="button" value="Frage">
+	  <input class="Element"  id="antwortelement" 	type="button" value="Antwort">
+</p>
+
+<hr>
+      Frage und Antwort:<br>
+	  
+	  Frage:<br><input type="text" id="frage" name="frage" ><br>
+	  Antwort:<br><input type="text" id="antwort" name="frage" ><br>
+	   Weitere Antwormöglichkeiten eingeben:<br>
+	  <input class="Element"  id="weiterefrage" value ="Weitere Antwort" 	type="button" > 
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+<footer>www.wasweißich.de</footer>
+
+
+
+</body>
+</html>
