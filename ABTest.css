@@ -45,19 +45,14 @@ section{
 
 
 .bild{
-	width: 100px ;
-	height: 200px;
+	width: 150px ;
+	height: 150px;
 	background-color: white;
 	border:solid 1px #000000;
-	background-color: white;
-	
+	padding: 0.5em;
 }
 
 
-  #draggable {  
-  	width: 150px; 
-	height: 150px; 
-	padding: 0.5em;}
 
 
 
@@ -80,7 +75,7 @@ section{
     
 	display: inline-block;
 	border:solid 1px #000000;
-	background-color: green;
+	background-color: #F0FFFF;
 	width: 842px ;
 	height: 595px;
 

@@ -2,22 +2,45 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
- <!--   <meta name ="viewport" content="width-device-width, initial-scale=1.0">   -->
+	<meta name ="viewport" content="width-device-width, initial-scale=1.0">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="ABTest.css">
-	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<title>OnlineAB</title>
+    
+	<link rel="stylesheet" href="ABTest.css">
+	<link rel="stylesheet" href ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+	<style>
+    #resizable { width: 150px; height: 150px; padding: 0.5em; }
+    #resizable h3 { text-align: center; margin: 0; }
+  </style>
+	
+	
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 
- <script>
-  $(document).ready(function(){ 
-		$( "#draggable" ).draggable();
+<script>
+
+$(document).ready(function(){ 
+		$( ".bild" ).draggable();
+		$( ".bild" ).resizable();
+		$( "#text1" ).draggable();
+		$( "#text1" ).resizable();
+        $( "#resizable" ).resizable({ handles: "se" });
+		$( "#resizable" ).resizable({ helper: "ui-resizable-helper"
+    });
+		
+		
+		
 		
 		 $("#bildelement").click(function() {
+		    $('#abquer').append('<div id="draggable" class="bild"><p>Bildelement </p>	</div>');
+		
+         } );
+		 
+		  $("#textelement").click(function() {
 		    $('#abquer').append('<div id="draggable" class="bild"><p>nicht bewegbar</p>	</div>');
-			
-			
+		
          } );
 
 });
@@ -61,7 +84,10 @@
 	   <input type="checkbox" id="uhr" name="sammeln" value ="" checked>
       <label for="uhr">Uhr anzeigen während Bearbeitungsphase?</label><br>
 	  
-	  
+	     <input type="checkbox" id="" name="" value ="" checked>
+      <label for="">Fragen in gleicher Reihenfolge?</label><br>
+      <input type="checkbox" id="" name="" value ="" >
+      <label for="">Fragen einzeln nacheinander?</label><br>
     
 </fieldset>
 </div>
@@ -69,9 +95,16 @@
 
 
 <div id="abquer" >
-	<div id="draggable" class="bild">
+	
+	
+	<div id="bildcontainer" class="bild">
 	  <p>Drag me around</p>
 	</div>
+	
+
+<textarea id="text1" class="textcontainer" rows="5" cols="20">Text eingeben</textarea>
+
+
 </div>
 
 
