@@ -1,0 +1,65 @@
+body{
+	background-color: #F5F6CE;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 20px;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+header {
+    
+	text-align:center;
+}
+
+
+
+nav{
+   width: 50% ;
+	
+	
+	 float: left;
+	 text-align: center;
+}
+
+section{
+   width: 50% ;
+	
+	
+	float: right;
+	 text-align: center;
+}
+
+ hr{
+        height: 1px;
+        background-color: black;
+        border: none;
+    }
+
+
+.eingabefeldzahl {
+  background-color:rgb(230, 235, 240);
+  width: 32px;
+	height: 32px;
+	cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#linkespalte{
+      width: 50% ;
+	
+	 float: left;
+	 text-align: left;
+	 
+}
+
+
+
+#rechtespalte{
+      width: 50% ;
+	 float: right;
+
+}	 
